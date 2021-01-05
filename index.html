@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
+    <title>Prototype</title>
+</head>
+<body>
+    <nav class="nav"></nav>
+    <!-- The main section starts here -->
+
+    <!-- The splitter comes from a library called metroUI  -->
+    <section data-role="splitter" class="h-100" data-min-sizes="100" data-gutter-size="10">
+
+        <!-- The reading passage section starts here -->
+        <div class="passage">
+            <!-- The scroll-box takes care of the scroll bar in the reading passage section and handle content overflow -->
+            <div class="scroll-box">
+                <!-- Title of the reading -->
+                <h1>‘Cytus II’: Cyberpunk rhythm game with insanely good plot</h1>
+                <!-- Author -->
+                <h5 id="author">Zoe Chow</h5>
+                <!-- All the paragraphs with paragraph number -->
+                <p><i class="para-no">[1]</i>It’s rare to find an indie game that excels at both gameplay and storytelling, but mobile game Cytus II manages to build an immersive game world around simple but addictive rhythm-based controls.</p>
+                <p><i class="para-no">[2]</i>Cytus II is set in the cyberspace of a dystopian world. After the majority of mankind is wiped out by a mysterious virus, surviving humans are frozen and under the care of sophisticated machines. You play as a variety of characters (both human and machine) as their stories converge into humanity’s last chance at revival.</p>
+                <p><i class="para-no">[3]</i>Unlike the falling note format used in Piano Tiles and many other rhythm games, the notes in Cytus II can pop up anywhere on your screen. A horizontal white line serves as an indicator for when to press the notes, moving up and down on the screen depending on the tempo of the song.</p>
+                <p><i class="para-no">[4]</i>The player must press a note when the line crosses the exact centre. The easiest note is the basic note which only needs to be pressed once. More complex notes include the hold note, the slide note and the flick note, which add new and creative ways to stay in tune with the rhythm of the song.
+                </p>
+                <p><i class="para-no">[5]</i>The three main song difficulties are Easy, Hard and Chaos. Easy has minimal notes while Chaos overwhelms your screen with everything it has. 
+                </p>
+                <p><i class="para-no">[6]</i>Each character has their own play style and does better with certain types of songs. Experience is earned after each round so you can level up and unlock new songs and higher difficulties. The character design is also top notch, with the six main playable characters each evoking a distinct visual style, from analytical robot ROBO_Head to cat loving NEKO#.</p>
+                <p><i class="para-no">[7]</i>Being a freemium game, you only have access to the six basic characters at the start but you can purchase premium characters (such as popular virtual singer Hatsune Miku) for real money. These aren’t necessary to complete the game, but are a fun new way to play if you really love the game.
+                </p>
+                <p><i class="para-no">[8]</i>Cytus II has it all: stunning animated visuals, intense and memorable gameplay, an immersive story, a wide variety of playable levels and a high quality soundtrack. If you love rhythm games and a good story, then Cytus IIis definitely a game you should try.</p>
+            </div>
+        </div>
+
+        <!-- The question answer sections -->
+        <div class="answer scroll-box">
+
+            <!-- Question answer form -->
+            <form action="" class="answer-form">
+                <!-- Title indicating the form -->
+                <h2>Question answer Section</h2>
+
+                <!-- This demonstrates one type of the question: words with similar or opposite meaning question -->
+                <h5 class="description"> Find a word from paragraphs 1 - 2 that has the opposite meaning of the following words</h5>
+                <div class="form-group">
+                    <label for="Question 1">1. Common (adj.)</label>
+                    <input type="text" name="question-1" id="" placeholder="Answer"/>
+                </div>
+                <div class="form-group">
+                    <label for="Question 2">2. Complicated (adj.)</label>
+                    <input type="text" name="question-2" id="" placeholder="Answer" />
+                </div>
+                <div class="form-group">
+                    <label for="Question 3">3. minority (n.)</label>
+                    <input type="text" name="question-3" id="" placeholder="Answer" />
+                </div>
+
+                <!-- This demonstrates the MC question -->
+                    <h5>4. What happens to mankind in the story of Cytus II</h5>
+                    <ul class="mc-list">
+                        <li>
+                            <label>
+                                <input type="radio" name="quetion-4" id="" /> <span>A. people live in a cyberspace</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="quetion-4" id="" /> <span>B. the majority of mankind is wiped out by a secret virus</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="radio" name="quetion-4" id="" /> <span>C. the world is frozen</span>
+                            </label>
+                        </li>
+                    </ul>
+                 
+                <!-- This demonstrates the summary cloze questions -->
+                <h5>Finish the summary of the game by choosing one word from the passage to fill in each blank.
+                </h5>
+                <div class="form-group">
+                    <label for="" id="summary-cloze">5 Unlike the falling note <input type="text" name="question-5" id="" size="10" /> used in many other rhythm games, the notes in Cytus II can pop up anywhere on the <input type="text" name="question-5" id="" size="10" />.</label>
+                </div>
+                <div class="form-group">
+                    <label for="" id="summary-cloze">6. The horizontal white line functions as an <input type="text" name="question-6" id="" size="10" /> to tell you when to<input type="text" name="question-6" id="" size="10" /> the notes.
+                    </label>
+                </div>
+
+                <!-- This demonstrates the T/F/NG type questions, which the last type of questions we'll have -->
+                <h5>Identify the following statements as True, False, or Not Given</h5>
+                <div class="form-group">
+                    <label for="">8  Easy has minimal notes while Hard has the maximum notes.</label>
+                    <!-- this shows how the T/F/NG options are displayed -->
+                    <select name="question-8" id="">
+                        <option value=""></option>
+                        <option value="True">True</option>
+                        <option value="False">False</option>
+                        <option value="Not Given">Not Given</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="">9 Some characters have the same play style.</label>
+                    <select name="question-9" id="">
+                        <option value=""></option>
+                        <option value="True">True</option>
+                        <option value="False">False</option>
+                        <option value="Not Given">Not Given</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="">10) Experience earned can help you level up.</label>
+                    <select name="question-10" id="">
+                        <option value=""></option>
+                        <option value="True">True</option>
+                        <option value="False">False</option>
+                        <option value="Not Given">Not Given</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer class="ans-panel">
+        <h1>Question Pallete</h1>
+    </footer>
+    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+</body>
+</html>

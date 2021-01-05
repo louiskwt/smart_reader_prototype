@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+.nav {
+    height: 4rem;
+    width: 100%;
+    min-width: 300px;
+    position: relative;
+    top: 0;
+    /* left: 0; */
+    background: #28929f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 50;
+}
+
+/* Main Section style */
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Reading Passage style */
+.passage {
+    width: 50%;
+    height: 100vh;
+    background-color: rgb(247, 177, 93);
+    display: flex;
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.passage h1{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.passage h5 {
+    text-align: right;
+}
+
+.passage div {
+    padding: 1rem 1rem;
+    overflow:auto;
+}
+
+i.para-no {
+    font-style:normal;
+    font-size: 1rem;
+    margin-right: .5rem;
+}
+
+/* Question Answer Section style starts here */
+.answer {
+    width: 50%;
+    height: 100vh;
+    background-color:#f0f2f5;
+    padding: 1rem 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.ans-panel {
+    height: 4rem;
+    width: 100%;
+    min-width: 300px;
+    position: relative;
+    top: 0;
+    /* left: 0; */
+    background: yellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 50;
+}
+/* Style for answer form */
+.answer-form {
+    display: flex;
+    flex-direction: column;
+}
+/* style for text input answer */
+.form-group {
+    display:flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    padding: .5em;
+}
+.form-group label {
+    padding: .5em 1em .5em 0;
+    flex: 1;
+    font-weight: 600;
+    font-size: 1em;
+}
+.form-group input {
+    flex: 2;
+}
+
+/* Style for MC questions */
+.mc-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+input[type="radio"]{
+    margin-right: 1rem;
+}
+
+.mc-list label, 
+input[type="radio"] {
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+/* Scroll bar style */
+.scroll-box {
+    overflow-y: scroll !important; /* overriding the spliter class*/
+  }
+  .scroll-box::-webkit-scrollbar {
+    width: .4em; 
+  }
+  .scroll-box::-webkit-scrollbar,
+  .scroll-box::-webkit-scrollbar-thumb {
+    overflow:visible;
+    border-radius: 4px;
+  }
+  .scroll-box::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,.2); 
+  }
