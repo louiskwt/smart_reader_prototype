@@ -84,6 +84,11 @@ i.para-no {
     display: flex;
     flex-direction: column;
 }
+
+.answer-form h5 {
+    font-weight: 600;
+    font-size: 1rem;
+}
 /* style for text input answer */
 .form-group {
     display:flex;
@@ -94,8 +99,9 @@ i.para-no {
 .form-group label {
     padding: .5em 1em .5em 0;
     flex: 1;
-    font-weight: 600;
+    /* font-weight: 600; */
     font-size: 1em;
+    line-height: 1.6;
 }
 .form-group input {
     flex: 2;
