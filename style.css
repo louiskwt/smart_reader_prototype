@@ -167,7 +167,7 @@ input[type="radio"] {
     position: relative;
     min-width:1%;
     height:100%;
-    background:cornflowerblue !important;
+    background:cornflowerblue !important; /* need the important tag override the styling coming from the metroUI library*/
   }
   
   .percent {
