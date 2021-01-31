@@ -1,3 +1,4 @@
+// initialise the variables and getting all the elements
 const correctAns = [
                     'rare', 
                     'simple', 
