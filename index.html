@@ -9,6 +9,15 @@
 </head>
 <body>
     <nav class="nav"></nav>
+    <section class="score-section hidden">
+        <h1 class="score"></h1>
+        <!-- Displaying the correct answer -->
+        <div class="progress">
+            <div class="bar">
+                <p class="percent"></p>
+            </div>
+        </div>
+    </section>
     <!-- The main section starts here -->
 
     <!-- The splitter comes from a library called metroUI  -->
@@ -41,7 +50,7 @@
         <div class="answer scroll-box">
 
             <!-- Question answer form -->
-            <form action="" class="answer-form">
+            <form action="" id="answer-form" >
                 <!-- Title indicating the form -->
                 <h2>Question answer Section</h2>
 
@@ -49,15 +58,15 @@
                 <h5 class="description"> Find a word from paragraphs 1 - 2 that has the opposite meaning of the following words</h5>
                 <div class="form-group">
                     <label for="Question 1">1. Common (adj.)</label>
-                    <input type="text" name="question-1" id="" placeholder="Answer"/>
+                    <input type="text" name="q1" id="" placeholder="Answer"/>
                 </div>
                 <div class="form-group">
                     <label for="Question 2">2. Complicated (adj.)</label>
-                    <input type="text" name="question-2" id="" placeholder="Answer" />
+                    <input type="text" name="q2" id="" placeholder="Answer" />
                 </div>
                 <div class="form-group">
                     <label for="Question 3">3. minority (n.)</label>
-                    <input type="text" name="question-3" id="" placeholder="Answer" />
+                    <input type="text" name="q3" id="" placeholder="Answer" />
                 </div>
 
                 <!-- This demonstrates the MC question -->
@@ -65,38 +74,38 @@
                     <ul class="mc-list">
                         <li>
                             <label>
-                                <input type="radio" name="quetion-4" id="" /> <span>A. people live in a cyberspace</span>
+                                <input type="radio" name="q4" id="" value="A"/> <span>A. people live in a cyberspace</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" name="quetion-4" id="" /> <span>B. the majority of mankind is wiped out by a secret virus</span>
+                                <input type="radio" name="q4" id="" value="B"/> <span>B. the majority of mankind is wiped out by a secret virus</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" name="quetion-4" id="" /> <span>C. the world is frozen</span>
+                                <input type="radio" name="q4" id="" value="C"/> <span>C. the world is frozen</span>
                             </label>
                         </li>
                     </ul>
                  
                 <!-- This demonstrates the summary cloze questions -->
-                <h5>Finish the summary of the game by choosing one word from the passage to fill in each blank.
+                <h5>Finish the summary of the game by choosing one word from the passage to fill in each blank. (Questions 5 - 14) 
                 </h5>
                 <div class="form-group">
                     <label for="" class="summary-cloze">
-                        5 Unlike the falling note <input type="text" name="question-5" id="" size="10" /> used in many other rhythm games, the notes in Cytus II can pop up anywhere on the <input type="text" name="question-5" id="" size="10" />.
+                        Unlike the falling note <input type="text" name="q5" id="" size="10" /> used in many other rhythm games, the notes in Cytus II can pop up anywhere on the <input type="text" name="q6" id="" size="10" />.
                     </label>
                 </div>
                 <div class="form-group">
                     <label for="" class="summary-cloze">
-                        6. The horizontal white line functions as an <input type="text" name="question-6" id="" size="10" /> to tell you when to<input type="text" name="question-6" id="" size="10" /> the notes.
+                        The horizontal white line functions as an <input type="text" name="q7" id="" size="10" /> to tell you when to<input type="text" name="q8" id="" size="10" /> the notes.
                     </label>
                 </div>
                 <div class="form-group">
                     <label for="" class="summary-cloze">
-                        7. The player must press a note when the line  <input type="text" name="question-7" id="" size="10" />  the exact centre. The easiest note is the <input type="text" name="question-7" id="" size="10" /> note which only needs to be pressed once.
-                        More <input type="text" name="question-7" id="" size="10" /> notes include the  <input type="text" name="question-7" id="" size="10" /> note, the  <input type="text" name="question-7" id="" size="10" /> note and the  <input type="text" name="question-7" id="" size="10" />
+                        The player must press a note when the line  <input type="text" name="q9" id="" size="10" />  the exact centre. The easiest note is the <input type="text" name="q10" id="" size="10" /> note which only needs to be pressed once.
+                        More <input type="text" name="q11" id="" size="10" /> notes include the  <input type="text" name="q12" id="" size="10" /> note, the  <input type="text" name="q13" id="" size="10" /> note and the  <input type="text" name="q14" id="" size="10" />
                         note.
                     </label>
                 </div>
@@ -104,104 +113,104 @@
                 <!-- This demonstrates the T/F/NG type questions, which the last type of questions we'll have -->
                 <h5>Identify the following statements as True, False, or Not Given</h5>
                 <div class="form-group">
-                    <label for="">8.  Easy has minimal notes while Hard has the maximum notes.</label>
+                    <label for="">15. Easy has minimal notes while Hard has the maximum notes.</label>
                     <!-- this shows how the T/F/NG options are displayed -->
-                    <select name="question-8" id="">
+                    <select name='q15' id="">
                         <option value=""></option>
-                        <option value="True">True</option>
-                        <option value="False">False</option>
-                        <option value="Not Given">Not Given</option>
+                        <option value="t">True</option>
+                        <option  value="f">False</option>
+                        <option value="ng">Not Given</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="">9. Some characters have the same play style.</label>
-                    <select name="question-9" id="">
-                        <option value=""></option>
-                        <option value="True">True</option>
-                        <option value="False">False</option>
-                        <option value="Not Given">Not Given</option>
+                    <label for="">16. Some characters have the same play style.</label>
+                    <select name='q16' id="">
+                        <option  value=""></option>
+                        <option  value="t">True</option>
+                        <option  value="f">False</option>
+                        <option  value="ng">Not Given</option>
                     </select>
                 </div>
                 
                 <div class="form-group">
-                    <label for="">10. Experience earned can help you level up.</label>
-                    <select name="question-10" id="">
-                        <option value=""></option>
-                        <option value="True">True</option>
-                        <option value="False">False</option>
-                        <option value="Not Given">Not Given</option>
+                    <label for="">17. Experience earned can help you level up.</label>
+                    <select name='q17' id="">
+                        <option  value=""></option>
+                        <option  value="t">True</option>
+                        <option  value="f">False</option>
+                        <option  value="ng">Not Given</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="">11. The character design is excellent.</label>
-                    <select name="question-11" id="">
+                    <label for="">18. The character design is excellent.</label>
+                    <select name='q18' id="">
                         <option value=""></option>
-                        <option value="True">True</option>
-                        <option value="False">False</option>
-                        <option value="Not Given">Not Given</option>
+                        <option value="t">True</option>
+                        <option value="f">False</option>
+                        <option value="ng">Not Given</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="">12. You can use 5 characters at the start..</label>
-                    <select name="question-11" id="">
+                    <label for="">19. You can use 5 characters at the start..</label>
+                    <select name='q19' id="">
                         <option value=""></option>
-                        <option value="True">True</option>
-                        <option value="False">False</option>
-                        <option value="Not Given">Not Given</option>
+                        <option  value="t">True</option>
+                        <option  value="f">False</option>
+                        <option  value="ng">Not Given</option>
                     </select>
                 </div>
-                <h5>13. Do you need to spend money to buy premium characters if you want to complete the games? 	</h5>
+                <h5>20. Do you need to spend money to buy premium characters if you want to complete the games? 	</h5>
                 <ul class="mc-list">
                     <li>
                         <label>
-                            <input type="radio" name="quetion-13" id="" /> <span>A. Yes</span>
+                            <input type="radio" name="q20" id="" value="A"/> <span>A. Yes</span>
                         </label>
                     </li>
                     <li>
                         <label>
-                            <input type="radio" name="quetion-13" id="" /> <span>B. No</span>
+                            <input type="radio" name="q20" id="" value="B"/> <span>B. No</span>
                         </label>
                     </li>
                 </ul>
-                <h5>14. Which of the following are the features of the game.</h5>
+                <h5>21. Which of the following are the features of the game.</h5>
                 <ul class="mc-list">
                     <li>
                         <label>
-                            <input type="radio" name="quetion-14" id="" /> <span>A. The game has stunning animated visuals.</span>
+                            <input type="radio" name="q21" id="" value="A"/> <span>A. The game has stunning animated visuals.</span>
                         </label>
                     </li>
                     <li>
                         <label>
-                            <input type="radio" name="quetion-14" id="" /> <span>B. The game contains intense and memorable gameplay</span>
+                            <input type="radio" name="q21"  id="" value="B"/> <span>B. The game contains intense and memorable gameplay</span>
                         </label>
                     </li>
                     <li>
                         <label>
-                            <input type="radio" name="quetion-14" id="" /> <span>C. The game has an immersive story</span>
+                            <input type="radio" name="q21"  id="" value="C"/> <span>C. The game has an immersive story</span>
                         </label>
                     </li>
                     <li>
                         <label>
-                            <input type="radio" name="quetion-14" id="" /> <span>D. All of the above.</span>
+                            <input type="radio" name="q21"  id="" value="D"/> <span>D. All of the above.</span>
                         </label>
                     </li>
                 </ul>
-                <h5>15. What kind of people should try Cytus II?</h5>
+                <h5>22. What kind of people should try Cytus II?</h5>
                 <ul class="mc-list">
                     <li>
                         <label>
-                            <input type="radio" name="quetion-14" id="" /> <span>A. People who love Miku.</span>
+                            <input type="radio" name="q22"  id="" value="A"/> <span>A. People who love Miku.</span>
                         </label>
                     </li>
                     <li>
                         <label>
-                            <input type="radio" name="quetion-14" id="" /> <span>B. People who have a lot of money.</span>
+                            <input type="radio"  name="q22" id="" value="B"/> <span>B. People who have a lot of money.</span>
                         </label>
                     </li>
                     <li>
                         <label>
-                            <input type="radio" name="quetion-14" id="" /> <span>C. People who love rhythm games and a good story.</span>
+                            <input type="radio"  name="q22" id="" value="C"/> <span>C. People who love rhythm games and a good story.</span>
                         </label>
                     </li>
                 </ul>
@@ -210,7 +219,9 @@
     </section>
     <footer class="ans-panel">
         <h1>Question Pallete</h1>
+        <button type="submit" form="answer-form">Submit Answer</button>
     </footer>
     <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+    <script src="score.js"></script>
 </body>
 </html>
