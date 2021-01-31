@@ -159,7 +159,7 @@ input[type="radio"] {
     max-width: 60%;
     min-height: 30px;
     overflow:hidden;
-    background:#dadada !important;
+    background:#dadada !important; /* need the important tag override the styling coming from the metroUI library*/
     border-radius:9px; 
   }
   
